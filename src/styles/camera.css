@@ -1,0 +1,49 @@
+#cameraFeed {
+  width: 25%;
+  display: none;
+}
+
+#cameraCanvas {
+  display: none;
+}
+
+#cameraPreview {
+  display: none;
+}
+
+#capturedImage {
+  width: 25%;
+}
+
+#audioPreviewContainer {
+  display: none;
+  margin-top: 1rem;
+}
+
+#loadingIndicator {
+  display: none;
+}
+
+#deleteAudioBtn {
+  display: none;
+}
+
+#cameraCapturePreview {
+  display: none;
+}
+
+#mapIframe {
+  width: 100%;
+  height: 250px;
+}
+@media (min-width: 768px) {
+  .camera-modal-content {
+    margin: 5% auto;
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    max-height: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}

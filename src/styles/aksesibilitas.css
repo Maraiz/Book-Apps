@@ -1,0 +1,153 @@
+.skip-link {
+  position: fixed; /* Fixed agar mengikuti scroll */
+  top: -40px; /* Tersembunyi di atas */
+  left: 8px;
+  padding: 8px 16px;
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  z-index: 9999;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0; /* Muncul saat di-focus */
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+.skip-link:hover {
+  top: 0; /* Muncul saat di-hover juga */
+  background-color: #357abd;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+/* Sisa CSS tetap sama */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+[aria-required='true']::after {
+  content: ' *';
+  color: #e74c3c;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+body {
+  line-height: 1.5;
+  color: #333;
+}
+
+button,
+.btn-primary,
+.upload-btn {
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px 16px;
+}
+
+button:hover,
+.btn-primary:hover,
+.upload-btn:hover {
+  opacity: 0.9;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fa-pulse,
+  .fa-spinner {
+    animation: none !important;
+  }
+
+  .skip-link {
+    transition: none !important;
+  }
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.modal-content {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.close-modal {
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

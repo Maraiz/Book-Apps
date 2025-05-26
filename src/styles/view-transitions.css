@@ -1,0 +1,298 @@
+::view-transition-group(*) {
+  animation-duration: 0.3s;
+}
+
+::view-transition-old(*) {
+  animation-timing-function: ease-out;
+}
+
+::view-transition-new(*) {
+  animation-timing-function: ease-in;
+}
+
+.form-box {
+  view-transition-name: form-box;
+}
+
+::view-transition-old(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-in;
+}
+
+::view-transition-old(form-box) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-out;
+}
+
+::view-transition-new(form-box) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-in;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.form-box .form-group,
+.form-box button,
+.form-box .login-footer,
+.form-box .register-footer {
+  opacity: 0;
+  animation: fade-in-up 0.5s forwards;
+}
+
+.form-box .form-group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.form-box .form-group:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.form-box .form-group:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.form-box button {
+  animation-delay: 0.4s;
+}
+.form-box .login-footer,
+.form-box .register-footer {
+  animation-delay: 0.5s;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboardpage {
+  view-transition-name: dashboard-container;
+}
+
+.dashboard {
+  view-transition-name: dashboard-header;
+}
+
+.book-showcase {
+  view-transition-name: book-showcase;
+}
+
+.stories-map-container {
+  view-transition-name: stories-map;
+}
+
+.story-detail-section {
+  view-transition-name: story-detail;
+}
+
+.story-grid {
+  view-transition-name: story-grid;
+}
+
+.story-card {
+  view-transition-name: story-card;
+}
+
+::view-transition-old(dashboard-container) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+}
+
+::view-transition-new(dashboard-container) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-in;
+}
+
+::view-transition-old(dashboard-header) {
+  animation: 250ms cubic-bezier(0.4, 0, 0.2, 1) both slide-left;
+}
+
+::view-transition-new(dashboard-header) {
+  animation: 250ms cubic-bezier(0.4, 0, 0.2, 1) both slide-right;
+}
+
+::view-transition-old(book-showcase),
+::view-transition-old(story-grid) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-down;
+}
+
+::view-transition-new(book-showcase),
+::view-transition-new(story-grid) {
+  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-up;
+}
+
+::view-transition-old(stories-map) {
+  animation: 350ms cubic-bezier(0.4, 0, 0.2, 1) both scale-out;
+}
+
+::view-transition-new(stories-map) {
+  animation: 350ms cubic-bezier(0.4, 0, 0.2, 1) both scale-in;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-down {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.story-card {
+  opacity: 0;
+  animation: card-appear 0.4s forwards;
+}
+
+.story-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.story-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.story-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.story-card:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.story-card:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.story-card:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+@keyframes card-appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.story-modal.active {
+  animation: modal-appear 0.3s forwards;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  animation: modal-content-appear 0.3s forwards;
+}
+
+@keyframes modal-content-appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

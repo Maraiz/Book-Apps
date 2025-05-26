@@ -1,0 +1,68 @@
+@media (max-width: 768px) {
+  .main-header {
+    padding: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand i {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .dashboard,
+  .add-story-section {
+    padding: 1.5rem;
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .book-showcase {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .location-action {
+    margin-top: 0.5rem;
+  }
+
+  body #storyModal.story-modal .modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  body #storyModal.story-modal .modal-body {
+    padding: 1.5rem;
+    max-height: calc(95vh - 40px);
+  }
+
+  body #storyModal.story-modal .modal-story-title {
+    font-size: 1.5rem;
+  }
+
+  body #storyModal.story-modal #detail-map {
+    height: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .camera-modal-content {
+    margin: 5% auto;
+    width: 90%;
+    max-width: 800px;
+    height: 90%;
+    max-height: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}

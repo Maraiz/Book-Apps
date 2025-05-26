@@ -1,0 +1,57 @@
+@import 'base.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'story-form.css';
+@import 'animations.css';
+@import 'responsive.css';
+@import 'utilities.css';
+@import 'aksesibilitas.css';
+
+@import 'styles.css';
+
+@import 'upload.css';
+@import 'modal.css';
+@import 'camera.css';
+@import 'layoutcerita.css';
+@import 'view-transitions.css';
+
+.dashboard {
+  animation-delay: 0.1s;
+}
+
+.add-story-section {
+  animation-delay: 0.2s;
+}
+
+.book-card {
+  animation-delay: 0.4s;
+}
+
+.stories-map-container {
+  position: relative;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.stories-map-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #6366f1, #4f46e5, #8b5cf6);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.stories-map {
+  height: 400px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 15px;
+}
